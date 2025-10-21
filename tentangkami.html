@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang Kami — Perusahaan Contoh</title>
+  <meta name="description" content="Halaman Tentang Kami: misi, visi, tim, dan kontak." />
+
+  <style>
+    :root{
+      --bg: #0f1724; /* deep blue-gray */
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #6ee7b7; /* soft green */
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      --max-width: 1100px;
+      --ff: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background:linear-gradient(180deg,var(--bg),#061123 120%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 18px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .logo{
+      width:68px;
+      height:68px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#0ea5a0,#60a5fa);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:20px;
+      color:#042028;
+      box-shadow:0 6px 18px rgba(6,30,36,0.5);
+    }
+
+    h1{font-size:22px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .top-actions{margin-left:auto;display:flex;gap:10px}
+    .btn{background:var(--accent);color:#042028;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+
+    main{display:grid;grid-template-columns:1fr;gap:22px;margin-top:18px}
+
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    .grid-2{display:grid;grid-template-columns:1fr 380px;gap:18px}
+
+    /* mission box */
+    .mission h2{margin:0 0 8px}
+    .mission p{color:var(--muted);line-height:1.55}
+
+    /* stats */
+    .stats{display:flex;gap:12px;margin-top:12px}
+    .stat{flex:1;background:var(--glass);padding:10px;border-radius:10px;text-align:center}
+    .stat h3{margin:0;font-size:20px}
+    .stat p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    /* team */
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+    .member{background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.01));padding:12px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#f97316,#fb7185);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .meta h4{margin:0;font-size:15px}
+    .meta p{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+    /* story */
+    .timeline{display:flex;flex-direction:column;gap:10px}
+    .event{display:flex;gap:12px;align-items:flex-start}
+    .dot{min-width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
+    .event p{margin:0;color:var(--muted)}
+
+    /* contact */
+    .contact-form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:100px;resize:vertical}
+
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:16px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .grid-2{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .team-grid{grid-template-columns:1fr}
+      .logo{width:54px;height:54px}
+      h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">PK</div>
+        <div>
+          <h1>Perusahaan Konten — Tentang Kami</h1>
+          <p class="lead">Menciptakan produk digital yang membantu orang belajar dan berkarya.</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button class="btn">Hubungi Kami</button>
+        <button class="btn ghost">Masuk</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card grid-2">
+        <div class="mission">
+          <h2>Misi & Visi</h2>
+          <p><strong>Visi:</strong> Menjadi platform pendidikan kreatif terdepan yang inklusif dan dapat diakses siapa saja.
+          </p>
+          <p style="margin-top:10px"><strong>Misi:</strong> Membuat konten berkualitas, mendukung pembelajaran praktis, dan membangun komunitas pembelajar aktif.</p>
+
+          <div class="stats" aria-hidden="false">
+            <div class="stat">
+              <h3>1.2K+</h3>
+              <p>Pengguna aktif</p>
+            </div>
+            <div class="stat">
+              <h3>150+</h3>
+              <p>Kursus & Modul</p>
+            </div>
+            <div class="stat">
+              <h3>98%</h3>
+              <p>Tingkat kepuasan</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card" aria-label="Kontak singkat">
+          <h3>Hubungi Tim</h3>
+          <p class="lead" style="margin-bottom:10px">Butuh bantuan? Isi pesan singkat, tim kami akan membalas.</p>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Pesan terkirim — contoh demo.');">
+            <input type="text" placeholder="Nama" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Pesan Anda" required></textarea>
+            <div style="display:flex;gap:8px;">
+              <button class="btn" type="submit">Kirim</button>
+              <button class="btn ghost" type="reset">Reset</button>
+            </div>
+          </form>
+        </aside>
+      </section>
+
+      <section class="card">
+        <h2>Tim Inti Kami</h2>
+        <p class="lead">Kelompok kecil yang berdedikasi pada produk, desain, dan edukasi.</p>
+
+        <div class="team-grid" role="list">
+          <div class="member" role="listitem">
+            <div class="avatar">AR</div>
+            <div class="meta">
+              <h4>Arina Rahma</h4>
+              <p>CEO & Founder — Strategi & Produk</p>
+            </div>
+          </div>
+
+          <div class="member" role="listitem">
+            <div class="avatar">DF</div>
+            <div class="meta">
+              <h4>Dimas Fajar</h4>
+              <p>Head of Engineering — Platform & Infrastruktur</p>
+            </div>
+          </div>
+
+          <div class="member" role="listitem">
+            <div class="avatar">SN</div>
+            <div class="meta">
+              <h4>Siti Nur</h4>
+              <p>Head of Content — Kurikulum & Quality</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Perjalanan Kami</h2>
+        <div class="timeline">
+          <div class="event">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <strong>2019</strong>
+              <p>Didirikan oleh sekelompok pengajar dan pembuat konten yang ingin mengubah cara orang belajar online.</p>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <strong>2021</strong>
+              <p>Meluncurkan platform beta dengan 30+ modul dan membentuk komunitas pengajar.</p>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <strong>2024</strong>
+              <p>Memperluas fitur interaksi langsung dan program mentoring.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Ingin bergabung?</h2>
+        <p class="lead">Kami selalu mencari talenta baru dan kolaborator. Kirim CV atau portofolio Anda.</p>
+
+        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;">
+          <a class="btn" href="#">Kirim Lamaran</a>
+          <a class="btn ghost" href="#">Lihat Lowongan</a>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Perusahaan Konten. Semua hak cipta.</div>
+        <div>Alamat: Jl. Contoh No. 12 · Email: halo@contoh.co</div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
